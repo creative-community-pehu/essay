@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <title>わかば</title>
+    <style type="text/css">
+      .cover {background-image: url(000.png);}
+      .back {background-image: url(001.png);}
+      .a {background-image: url(002.png);}
+      .b {background-image: url(003.png);}
+      .c {background-image: url(004.png);}
+      .d {background-image: url(005.png);}
+      .e {background-image: url(006.png);}
+      .f {background-image: url(007.png);}
+      .library li {background-size: 80%;}
+      .by {width:5vw; padding-right: 1vw;}
+      .as {width:15vw; padding-right: 0;}
+      .topic {
+        color: #fff;
+        background:#43B149;
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .buy a:hover {color:#43B149;}
+      .hint span {
+        display:block;
+        padding: 0.25rem;
+      }
+      .hint span::before {
+        content: "🌱";
+        display:inline-block;
+      }
+
+      .top {margin:0 0 5vh;}
+      .bottom {margin:5vh 0 0;}
+      .aha {
+        padding:0.5rem 1rem;
+        position:fixed;
+        top:0; right:0;
+        background:#43B149;
+        margin: 0;
+        color:#fff;
+        border-radius:50vw;
+      }
+      .center {
+        font-size:100%;
+        line-height:200%;
+        background:#43B149;
+        margin: 10vh auto 0;
+        color:#fff;
+        border-radius:50vw;
+      }
+      .center span {
+        padding:1rem 4.5vw;
+        display: block;
+      }
+      .left, .right {display:inline-block;}
+      .left {float:left;}
+      .right {float:right;}
+
+      .library::-webkit-scrollbar-thumb,
+      .library li::-webkit-scrollbar-thumb{
+        background: #43B149;
+      }
+
+      @media screen and (max-width: 1100px){
+        .value {
+          font-size:2.5vw;
+        }
+      }
+    </style>
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="../preview.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="../scrollable.js"></script>
+
+  </head>
+  <body>
+    <ul class="mousedragscrollable library">
+      <li class="cover"></li>
+      <li>
+        <div class="contents">
+            <p class="top"><b class="left">エッセイ集</b> <b class="right">わかば</b></p>
+            <p class="center">
+            <span>生活にまつわる17のエッセイと、成長と変化を表現した5つのアハ体験を収録</span>
+            <span>17 Essays about life by pehu<br/>and 5 Aha experiences about growth and change.</span>
+            </p>
+            <p class="bottom"><b class="left">17 Essay</b> <b class="right">5 Aha</b></p>
+        </div>
+      </li>
+      <li class="a"></li>
+
+      <li>
+        <div class="contents">
+          <p><span class="topic">ヒント hints</span></p>
+          <p class="hint">
+          <span>
+          表紙の絵が？…！<br>a graphic of the cover had ... !
+          </span>
+          <span>
+          本の側面が？…！<br>side of the book had ... !
+          </span>
+          <span>
+          絵文字が？…！<br>the emojis on essay title page had ... !
+          </span>
+          <span>
+          写真が？…！<br>some photos had ... !
+          </span>
+          <span>
+          あとひとつは？…！<br>and one more efect is ... !
+          </span>
+        </p>
+          <span class="aha">Aha!</span>
+        </div>
+      </li>
+
+      <li class="d"></li>
+      <li class="e"></li>
+      <li class="f"></li>
+
+      <li>
+        <div class="contents">
+          <p>
+          <span class="topic">著者 writers</span><br>
+          <span>芥川 亜由弥 / ayumi akutagawa</span>
+          <br/>
+          <span>大津 愛美 / manami otsu</span>
+          <br/>
+          <span>小西 彩水 / ayami konishi</span>
+          <br/>
+          <span>笹嶋 一馬 / kazuma sasajima</span>
+          <br/>
+          <span>中尾 香織 / kaori nakao</span>
+          </p>
+          <p>
+          <span class="topic">翻訳 translation</span><br>
+          <span>芥川 亜由弥 / ayumi akutagawa</span>
+          <br/>
+          <span>沼本 春花 / haruka numoto</span>
+          </p>
+          <p>
+          <span class="topic">デザイン design</span><br>
+          <span>芥川 亜由弥 / ayumi akutagawa</span>
+          <br/>
+          <span>笹嶋 一馬 / kazuma sasajima</span>
+          </p>  
+        </div>
+      </li>
+
+      <li class="c">
+        <div class="outside">
+        <span class="buy">
+        <a href="" target="_parent">BUY</a>
+        </span>
+        </div>
+      </li>
+
+      <li>
+        <div class="contents">
+          <p>
+          <span class="name">Essay Book</span></p>
+          <p>
+          <span class="name">size</span>
+          <span class="as">B6</span>
+          <span class="name">pages</span>
+          <span class="as">88</span>
+          </p>
+          <p>
+          <span class="name">copies</span>
+          <span class="as">100</span>
+          </p>
+          <p>
+          <span class="name">first edition</span>
+          <span class="">5.30.2020</span>
+          </p>
+          <p>
+          <span class="name">price</span>
+          <span class="">¥1,200- (+tax)</span>
+          </p>   
+        </div>
+      </li>
+      
+    </ul>
+  </body>
+
+  <script>$(".mousedragscrollable").mousedragscrollable();</script>
+
+</html>
