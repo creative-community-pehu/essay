@@ -8,6 +8,30 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 <style type="text/css">
+.pehu {font-family: "MS Mincho", "SimSong", serif;}
+#credit {
+  width:95%;
+  margin:2.5rem 2.5% 0;
+  font-size:1.25rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+#credit a {
+  color:#000;
+  text-decoration: none;
+}
+#credit a:hover {
+  color:blue;
+  text-decoration: none;
+  border-bottom: 2px dotted;
+}
+#credit b {
+  color:#fff;
+  background: #000;
+  padding:0.5rem;
+  font-weight: 500;
+}
 @media screen and (max-width: 1100px){
     .library li {max-height: 75vh;}
 }
@@ -17,6 +41,11 @@
 <body>
 
 <div id="book"></div>
+
+<div id="credit">
+<p class="noprint">Presented by</p>
+<p><a href="/pehu/" class="pehu">∧° ┐</a></p>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
