@@ -7,15 +7,74 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+
 <style type="text/css">
 .pehu {font-family: "MS Mincho", "SimSong", serif;}
+
+#symbol {
+  width: 300px;
+  height: 250px;
+  position: relative;
+  margin: 4.5rem auto 7.5rem;
+  background:#43B149;
+  border-radius: 50rem;
+    animation-name: wakaba;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-out;
+    animation-direction:alternate;
+}
+#symbol::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    display: block;
+    background:#000;
+    animation-name: rotate;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in;
+    animation-direction:alternate;
+  }
+
+@keyframes wakaba {
+  from  {
+    border-radius: 45rem 55rem;
+    }
+  to  {
+    border-radius: 50rem;
+    }
+}
+
+@keyframes rotate {
+  from  {
+    width: 100px;
+    height: 55px;
+    bottom:0%; right: 10%;
+    margin: 2.5%;
+    transform:translate(-0%, -0%) skewX(-60deg);
+    }
+  to  {
+    width: 300px;
+    height: 250px;
+    border-radius: 50rem;
+    bottom:0%; right: 0%;
+    transform:translate(-0%, -0%) skewX(0deg);
+    }
+}
+
 #credit {
   width:95%;
-  margin:0 2.5%;
+  margin:1.25% 2.5% 0;
   font-size:1.25rem;
   display: flex;
   justify-content: space-between;
   flex-wrap:wrap;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 #credit a {
   color:#000;
@@ -36,21 +95,54 @@
     .library li {max-height: 75vh;}
 }
 </style>
-<title> わかば | creative-community.space </title>
+<title> Essay | creative-community.space </title>
 </head>
 <body>
+
+<div id="credit">
+<span>エッセイ</span>
+<span>Essay</span>
+</div>
+
+<body>
+
+  <main id="top">
+
+    <a href="/essay/" id="home">
+      <div id="symbol"></div>
+    </a>
+
+    <section id="content" style="padding-top: 0; border-bottom: 0; padding-bottom: 0;">
+
+      <details>
+        <summary>
+          <h2>Titel</h2>
+          <i>by</i>
+        </summary>
+        <div class="content">
+          <h3>Subtitle</h3><br>
+          Text<br>
+          <img src="images/.png" width="200"><br>
+          <a href="" target="_blank">hyperlink</a> <i>by ( )</i><br>
+          <br>
+        </div>
+      </details>
+    </section>
+
+  </main>
 
 <div id="book"></div>
 
 <div id="credit">
-<p class="noprint">Presented by</p>
+<p>Presented</p>
+<p>by</p>
 <p><a href="/pehu/" class="pehu">∧° ┐</a></p>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(function(){
-      $("#book").load("/essay/book/");
+      $("#book").load("book/");
 })
 </script>
 </body>
