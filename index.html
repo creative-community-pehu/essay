@@ -15,11 +15,20 @@
 <style type="text/css">
 .pehu {font-family: "MS Mincho", "SimSong", serif;}
 
+.wakaba {
+  background: #43B149;
+  color: #000;
+}
+.hal {
+  background: pink;
+  color: #fff;
+}
+
 #symbol {
   width: 300px;
   height: 250px;
   position: relative;
-  margin: 4.5rem auto 7.5rem;
+  margin: 4.5rem auto 5.5rem;
   background:#43B149;
   border-radius: 50rem;
     animation-name: wakaba;
@@ -91,6 +100,7 @@
   padding:0.5rem;
   font-weight: 500;
 }
+
 @media screen and (max-width: 1100px){
     .library li {max-height: 75vh;}
 }
@@ -114,20 +124,43 @@
 
     <section id="content" style="padding-top: 0; border-bottom: 0; padding-bottom: 0;">
 
-      <details>
+      <details open>
         <summary>
-          <h2>Titel</h2>
-          <i>by</i>
+          <h2>Essay Book</h2>
         </summary>
         <div class="content">
-          <h3>Subtitle</h3><br>
-          Text<br>
-          <img src="images/.png" width="200"><br>
-          <a href="" target="_blank">hyperlink</a> <i>by ( )</i><br>
+          <h3 class="wakaba">わかば</h3>
+          <u>2020年 5月 30日</u><br>
+          <p>2019年1月-12月まで、会員限定に発行した月刊デジタルマガジンに収録したペフメンバーによるエッセイより厳選した生活にまつわる17のエッセイと、成長と変化を表現した5つのアハ体験を収録した書籍「わかば」の発売を開始しました。</p>
+          <a href="#book">もっと詳しく</a><br>
           <br>
         </div>
       </details>
+      <details>
+        <summary>
+          <h2>Special Editions</h2>
+        </summary>
+        <div class="content">
+          <h3 class="hal">四季エディション　春</h3>
+          <u>近日発売</u><br>
+          <img src="hal/000.JPG" width="100%">
+          <p>絶賛制作中</p>
+          <!--
+          <a href="" target="_blank">もっと詳しく</a><br>
+          -->
+          <br>
+        </div>
+      </details>
+    
     </section>
+
+
+    <footer>
+      Poetic<br>
+      Elusive<br>
+      Hint<br>
+      Usefully
+    </footer>
 
   </main>
 
@@ -139,11 +172,32 @@
 <p><a href="/pehu/" class="pehu">∧° ┐</a></p>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(function(){
-      $("#book").load("book/");
+$("#book").load("book/");
 })
+$(function(){
+var p=$("#do");
+p.scrollLeft(1000);
+});
+$(function(){
+   // #で始まるアンカーをクリックした場合に処理
+   $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 1500; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
 </script>
 </body>
 </html>
