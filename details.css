@@ -39,7 +39,7 @@ a {
 details .content u {
   display: inline;
   float: right;
-  padding: 0.5rem 1rem 0;
+  padding: 0.5rem 0 0;
   font-size: 75%;
 }
 
