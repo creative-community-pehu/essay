@@ -28,7 +28,6 @@
     from  {border-radius: 45rem 55rem;}
     to  {border-radius: 50rem;}
 }
-
 @keyframes rotate {
     from  {
       width: 5rem;
