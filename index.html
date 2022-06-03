@@ -156,6 +156,15 @@
             max-height: 70vw;
         }
         
+        .open #note {
+            display: block;
+        }
+        
+        .open #book,
+        #note {
+            display: none;
+        }
+        
         @media screen and (max-width: 550px) {
             #symbol {
                 width: 250px;
@@ -200,7 +209,7 @@
         <span>Essay</span>
     </div>
 
-    <body>
+    <body id="box">
         <main id="top">
             <a href="/members/essay/" id="home">
                 <div id="symbol"></div>
@@ -218,7 +227,7 @@
                     </div>
                 </details>
                 <details>
-                    <summary>
+                    <summary id="members">
                         <h2>MEMBERS ONLY</h2>
                     </summary>
                     <div class="content">
@@ -229,6 +238,7 @@
             </section>
         </main>
         <div id="book"></div>
+        <div id="note"></div>
 
         <div id="credit">
             <p><a class="cc" onClick="history.back(); return false;" target="_parent">↵</a></p>
@@ -241,6 +251,17 @@
                 $("#book").load("book/");
                 $("#note").load("thinknote/");
             })
+
+            let btn = document.querySelector('#members');
+            let box = document.querySelector('#box');
+
+            let btnToggleclass = function(el) {
+                el.classList.toggle('open');
+            }
+
+            btn.addEventListener('click', function() {
+                btnToggleclass(box);
+            }, false);
         </script>
     </body>
 
