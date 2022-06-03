@@ -221,16 +221,12 @@
                         <h1>会員限定ページから、会員限定エッセイを投稿／閲覧いただけます。</h1>
                         <h1><a href="/faqs/">会員になる</a></h1>
                         <h1><a href="/members/essay/">ログインする</a></h1>
-                        <hr/>
-                        <h3 class="hal">四季エディション　春</h3>
-                        <u>Special Edition</u><br>
-                        <img src="hal/000.JPG" width="100%">
                     </div>
+                    <div id="note"></div>
                 </details>
 
             </section>
         </main>
-
 
         <div id="credit">
             <p><a class="cc" onClick="history.back(); return false;" target="_parent">↵</a></p>
@@ -241,6 +237,7 @@
         <script type="text/javascript">
             $(function() {
                 $("#book").load("book/");
+                $("#note").load("thinknote/");
             })
             $(function() {
                 // #で始まるアンカーをクリックした場合に処理

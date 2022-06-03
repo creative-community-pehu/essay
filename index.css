@@ -11,7 +11,7 @@ body {
 main {
     max-width: 600px;
     margin: 0 auto;
-    padding: 1.5rem 0 0;
+    padding: 0;
 }
 
 a {
@@ -22,7 +22,6 @@ a {
 #content {
     margin-top: 1.5em;
     padding-top: 1.25em;
-    padding-bottom: 2.5em;
 }
 
 #content h2 {
