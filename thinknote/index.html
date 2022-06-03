@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <title>Think Note</title>
+    <style type="text/css">
+        .contents span {
+            display: inline-block;
+        }
+        
+        .title {
+            padding-right: 15vw;
+        }
+        
+        .by {
+            width: 5vw;
+            padding-right: 1vw;
+        }
+        
+        .as {
+            width: 15vw;
+            padding-right: 0;
+        }
+        
+        .name {
+            padding: 5vh 10vw;
+        }
+        
+        .center {
+            width: 100%;
+            text-align: center;
+            padding: 5vh 0;
+        }
+        
+        .library li {
+            background-size: 100%;
+        }
+        
+        .cover {
+            background-image: url(001.jpg);
+        }
+        
+        .a {
+            background-image: url(002.jpg);
+        }
+        
+        .b {
+            background-image: url(003.jpg);
+        }
+        
+        .c {
+            background-image: url(004.jpg);
+        }
+        
+        .back {
+            background-image: url(000.jpg);
+        }
+        
+        .buy a:hover {
+            color: rgb(255, 253, 115);
+        }
+        
+        .library::-webkit-scrollbar-thumb,
+        .library li::-webkit-scrollbar-thumb {
+            background: rgb(255, 253, 115);
+        }
+        
+        @media screen and (max-width: 1100px) {
+            .value {
+                font-size: 2.5vw;
+            }
+        }
+    </style>
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/www/preview.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/www/scrollable.js"></script>
+
+</head>
+
+<body>
+    <ul class="mousedragscrollable library">
+
+        <li class="cover"></li>
+
+        <li>
+            <div class="contents">
+                <p>
+                    <span class="title">
+<b><u>Think Note</u></b>
+</span>
+                    <span class="by">は、</span>
+                </p>
+                <p>
+                    小さくコンパクトなスティッキー＆ペンです。
+                </p>
+                <p>ここに、気持ちの一片を書き出してみましょう。</p>
+                <br/>
+                <p>
+                    <span class="as"><i><u>not for sale</u></i></span>
+                </p>
+                <p>
+                    <span class="as"><b>only for gift</b></span>
+                </p>
+            </div>
+        </li>
+
+        <li class="a"></li>
+
+        <li>
+            <div class="contents">
+                <p>
+                    <span class="title">
+          <b><u>Think Note</u></b>
+          </span>
+                    <span class="by">is</span>
+                </p>
+                <span class="name"><b>stickey</b></span><br/>
+                <span class="name">and</span><br/>
+                <span class="name"><b>pen</b></span>
+                </p>
+                <p>
+                    <span class="as"><u>color</u></span>
+                    <span class="by"></span>
+                    <span class="as"><i>yellow</i></span>
+                    <span class="as"><i>transparent</i></span>
+                    <span class="as"></span>
+                </p>
+                <p>
+                    <span class="as"><u>size</u></span>
+                    <span class="by"></span>
+                    <span class="as"><i>mini</i></span>
+                    <span class="as"><i>compact</i></span>
+                    <span class="as"><i>pocketable</i></span>
+                </p>
+            </div>
+        </li>
+
+        <li class="back">
+        </li>
+
+        <li class="b"></li>
+        <li class="c"></li>
+
+        <li>
+            <div class="contents">
+                <p>
+                    <span class="title">
+          <b><u>Think Note</u></b>
+          </span>
+                    <span class="by">is</span>
+                </p>
+                <span class="name"><b>peace<br/>piece</b></span>
+                <span class="name">of</span>
+                <span class="name"><b>mind</b></span>
+                </p>
+                <br/>
+                <p>
+                    <span class="as"><i> won't</i></span>
+                    <span class="as"><i>forget</i></span>
+                    <span class="as">/</span>
+                    <span class="as"><i>write</i></span>
+                    <span class="as"><i>down</i></span>
+                    <br>
+                    <span class="name"><i>make</i></span>
+                    <span class="name"><i>it</i></span>
+                    <span class="name"><i>visible</i></span>
+                </p>
+            </div>
+        </li>
+
+    </ul>
+</body>
+
+<script>
+    $(".mousedragscrollable").mousedragscrollable();
+</script>
+
+</html>
