@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -11,94 +12,155 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
     <style type="text/css">
-      .library {font-family: 'Noto Sans JP', sans-serif;}
-      .cover {background-image: url(/essay/book/000.png);}
-      .back {background-image: url(/essay/book/001.png);}
-      .a {background-image: url(/essay/book/002.png);}
-      .b {background-image: url(/essay/book/003.png);}
-      .c {background-image: url(/essay/book/004.png);}
-      .d {background-image: url(/essay/book/005.png);}
-      .e {background-image: url(/essay/book/006.png);}
-      .f {background-image: url(/essay/book/007.png);}
-      .g {background-image: url(/essay/book/008.png);}
-      .library li {background-size: 80%;}
-      .by {width:5vw; padding-right: 1vw;}
-      .as {width:15vw; padding-right: 0;}
-      .topic {
-        color: #fff;
-        background:#43B149;
-        display: inline-block;
-        padding: 0.25rem 0.5rem;
-        margin-bottom: 0.5rem;
-      }
-      .hint span {
-        display:block;
-        padding: 0.25rem;
-      }
-      .hint span::before {
-        content: "🌱";
-        display:inline-block;
-      }
-
-      .top {margin:0 0 5vh;}
-      .bottom {margin:5vh 0 0;}
-      .aha {
-        padding:0.5rem 1rem;
-        position:fixed;
-        top:0; right:0;
-        background:#43B149;
-        margin: 0;
-        color:#fff;
-        border-radius:50vw;
-      }
-      .center {
-        font-size:100%;
-        line-height:200%;
-        background:#43B149;
-        margin: 0 auto 0;
-        color:#fff;
-        border-radius:50vw;
-      }
-      .center span {
-        padding:1rem 4.5vw;
-        display: block;
-      }
-      .left, .right {display:inline-block;}
-      .left {float:left;}
-      .right {float:right;}
-
-      .library::-webkit-scrollbar-thumb,
-      .library li::-webkit-scrollbar-thumb{
-        background: #43B149;
-      }
-
-      .contents a {
-        background: #43B149;
-        color:#fff;
-        padding:0.25rem;
-        text-decoration: none;
-        margin-right: 1rem;
-        transition: all 1500ms ease;
-        display: inline-block;
-      }
-      .contents a:hover {
-        color:#000;
-        background: #fffbe6 !important;
-      }
-
-@media screen and (max-width: 750px){
-
-.library li span {
-  font-size: 2vw;
-}
-
-.contents a {
-  line-height: 200%;
-  padding:0.25vw;
-  font-size: 200%;
-  margin-right: 1vw;
-}
-}
+        .library {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .cover {
+            background-image: url(/essay/book/000.png);
+        }
+        
+        .back {
+            background-image: url(/essay/book/001.png);
+        }
+        
+        .a {
+            background-image: url(/essay/book/002.png);
+        }
+        
+        .b {
+            background-image: url(/essay/book/003.png);
+        }
+        
+        .c {
+            background-image: url(/essay/book/004.png);
+        }
+        
+        .d {
+            background-image: url(/essay/book/005.png);
+        }
+        
+        .e {
+            background-image: url(/essay/book/006.png);
+        }
+        
+        .f {
+            background-image: url(/essay/book/007.png);
+        }
+        
+        .g {
+            background-image: url(/essay/book/008.png);
+        }
+        
+        .library li {
+            background-size: 80%;
+        }
+        
+        .by {
+            width: 5vw;
+            padding-right: 1vw;
+        }
+        
+        .as {
+            width: 15vw;
+            padding-right: 0;
+        }
+        
+        .topic {
+            color: #fff;
+            background: #43B149;
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hint span {
+            display: block;
+            padding: 0.25rem;
+        }
+        
+        .hint span::before {
+            content: "🌱";
+            display: inline-block;
+        }
+        
+        .top {
+            margin: 0 0 5vh;
+        }
+        
+        .bottom {
+            margin: 5vh 0 0;
+        }
+        
+        .aha {
+            padding: 0.5rem 1rem;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background: #43B149;
+            margin: 0;
+            color: #fff;
+            border-radius: 50vw;
+        }
+        
+        .center {
+            font-size: 100%;
+            line-height: 200%;
+            background: #43B149;
+            margin: 0 auto 0;
+            color: #fff;
+            border-radius: 50vw;
+        }
+        
+        .center span {
+            padding: 1rem 4.5vw;
+            display: block;
+        }
+        
+        .left,
+        .right {
+            display: inline-block;
+        }
+        
+        .left {
+            float: left;
+        }
+        
+        .right {
+            float: right;
+        }
+        
+        .library::-webkit-scrollbar-thumb,
+        .library li::-webkit-scrollbar-thumb {
+            background: #43B149;
+        }
+        
+        .contents a {
+            background: #43B149;
+            color: #fff;
+            padding: 0.25rem;
+            text-decoration: none;
+            margin-right: 1rem;
+            transition: all 1500ms ease;
+            display: inline-block;
+        }
+        
+        .contents a:hover {
+            color: #000;
+            background: #fffbe6 !important;
+        }
+        
+        @media screen and (max-width: 750px) {
+            .library li span {
+                font-size: 2vw;
+            }
+            .contents a {
+                line-height: 200%;
+                padding: 0.25vw;
+                font-size: 200%;
+                margin-right: 1vw;
+            }
+        }
     </style>
 
     <!-- Import the webpage's stylesheet -->
@@ -107,120 +169,123 @@
     <!-- Import the webpage's javascript file -->
     <script src="https://creative-community.space/www/scrollable.js"></script>
 
-  </head>
-  <body>
-    <ul class="mousedragscrollable library">
-      <li class="cover"></li>
-      <li>
-        <div class="contents">
-            <p class="top"><b class="left">エッセイ集</b> <b class="right">わかば</b></p>
-            <p class="center">
-            <span>生活にまつわる17のエッセイと、成長と変化を表現した5つのアハ体験を収録</span>
-            <span>17 Essays about New Life by pehu<br/>and 5 Aha experiences about growth and change.</span>
-            </p>
-            <p class="bottom"><b class="left">17 Essay</b> <b class="right">5 Aha</b></p>
-        </div>
-      </li>
-      <li class="a"></li>
+</head>
 
-      <li>
-        <div class="contents">
-          <p><span class="topic">ヒント hints</span></p>
-          <p class="hint">
-          <span>
+<body>
+    <ul class="mousedragscrollable library">
+        <li class="cover"></li>
+        <li>
+            <div class="contents">
+                <p class="top"><b class="left">エッセイ集</b> <b class="right">わかば</b></p>
+                <p class="center">
+                    <span>生活にまつわる17のエッセイと、成長と変化を表現した5つのアハ体験を収録</span>
+                    <span>17 Essays about New Life by pehu<br/>and 5 Aha experiences about growth and change.</span>
+                </p>
+                <p class="bottom"><b class="left">17 Essay</b> <b class="right">5 Aha</b></p>
+            </div>
+        </li>
+        <li class="a"></li>
+
+        <li>
+            <div class="contents">
+                <p><span class="topic">ヒント hints</span></p>
+                <p class="hint">
+                    <span>
           表紙の絵が？…！<br>a graphic of the cover had ... !
           </span>
-          <span>
+                    <span>
           本の側面が？…！<br>side of the book had ... !
           </span>
-          <span>
+                    <span>
           絵文字が？…！<br>the emojis on essay title page had ... !
           </span>
-          <span>
+                    <span>
           写真が？…！<br>some photos had ... !
           </span>
-          <span>
+                    <span>
           あとひとつは？…！<br>and one more efect is ... !
           </span>
-        </p>
-          <span class="aha">Aha!</span>
-        </div>
-      </li>
+                </p>
+                <span class="aha">Aha!</span>
+            </div>
+        </li>
 
-      <li class="d"></li>
-      <li class="e"></li>
-      <li class="f"></li>
+        <li class="d"></li>
+        <li class="e"></li>
+        <li class="f"></li>
 
-      <li>
-        <div class="contents">
-          <p>
-          <span class="topic">著者 writers</span><br>
-          <span>芥川 亜由弥 / ayumi akutagawa</span>
-          <br/>
-          <span>大津 愛美 / manami otsu</span>
-          <br/>
-          <span>小西 彩水 / ayami konishi</span>
-          <br/>
-          <span>笹嶋 一馬 / kazuma sasajima</span>
-          <br/>
-          <span>中尾 香織 / kaori nakao</span>
-          </p>
-          <p>
-          <span class="topic">翻訳 translation</span><br>
-          <span>芥川 亜由弥 / ayumi akutagawa</span>
-          <br/>
-          <span>沼本 春花 / haruka numoto</span>
-          </p>
-          <p>
-          <span class="topic">デザイン design</span><br>
-          <span>芥川 亜由弥 / ayumi akutagawa</span>
-          <br/>
-          <span>笹嶋 一馬 / kazuma sasajima</span>
-          </p>  
-        </div>
-      </li>
+        <li>
+            <div class="contents">
+                <p>
+                    <span class="topic">著者 writers</span><br>
+                    <span>芥川 亜由弥 / ayumi akutagawa</span>
+                    <br/>
+                    <span>大津 愛美 / manami otsu</span>
+                    <br/>
+                    <span>小西 彩水 / ayami konishi</span>
+                    <br/>
+                    <span>笹嶋 一馬 / kazuma sasajima</span>
+                    <br/>
+                    <span>中尾 香織 / kaori nakao</span>
+                </p>
+                <p>
+                    <span class="topic">翻訳 translation</span><br>
+                    <span>芥川 亜由弥 / ayumi akutagawa</span>
+                    <br/>
+                    <span>沼本 春花 / haruka numoto</span>
+                </p>
+                <p>
+                    <span class="topic">デザイン design</span><br>
+                    <span>芥川 亜由弥 / ayumi akutagawa</span>
+                    <br/>
+                    <span>笹嶋 一馬 / kazuma sasajima</span>
+                </p>
+            </div>
+        </li>
 
-      <li class="g">
-        <div class="contents">
-        <p class="en">
-        <b class="by">Distribute</b>
-        </p>
-        <p class="en">
-        <a href="https://newlifecollection.com/ca2/279/p-r2-s/" target="_blank">New Life Collection</a>
-        <a href="https://bnaaltermuseum.com/" target="_blank">BnA Alter Museum</a>
-        <a href="https://aohatabooks.com/" target="_blank">本屋青旗</a>
-        <a href="https://dottodot.today/" target="_blank">dot to dot today</a>
-        </p>
-      </li>
+        <li class="g">
+            <div class="contents">
+                <p class="en">
+                    <b class="by">Distribute</b>
+                </p>
+                <p class="en">
+                    <a href="https://newlifecollection.com/ca2/279/p-r2-s/" target="_blank">New Life Collection</a>
+                    <a href="https://bnaaltermuseum.com/" target="_blank">BnA Alter Museum</a>
+                    <a href="https://aohatabooks.com/" target="_blank">本屋青旗</a>
+                    <a href="https://dottodot.today/" target="_blank">dot to dot today</a>
+                </p>
+        </li>
 
-      <li>
-        <div class="contents">
-          <p>
-          <span class="name">Essay Book</span></p>
-          <p>
-          <span class="name">size</span>
-          <span class="as">B6</span>
-          <span class="name">pages</span>
-          <span class="as">88</span>
-          </p>
-          <p>
-          <span class="name">copies</span>
-          <span class="as">100</span>
-          </p>
-          <p>
-          <span class="name">first edition</span>
-          <span class="">5.30.2020</span>
-          </p>
-          <p>
-          <span class="name">price</span>
-          <span class="">¥1,200- (+tax)</span>
-          </p>   
-        </div>
-      </li>
-      
+        <li>
+            <div class="contents">
+                <p>
+                    <span class="name">Essay Book</span></p>
+                <p>
+                    <span class="name">size</span>
+                    <span class="as">B6</span>
+                    <span class="name">pages</span>
+                    <span class="as">88</span>
+                </p>
+                <p>
+                    <span class="name">copies</span>
+                    <span class="as">100</span>
+                </p>
+                <p>
+                    <span class="name">first edition</span>
+                    <span class="">5.30.2020</span>
+                </p>
+                <p>
+                    <span class="name">price</span>
+                    <span class="">¥1,200- (+tax)</span>
+                </p>
+            </div>
+        </li>
+
     </ul>
-  </body>
+</body>
 
-  <script>$(".mousedragscrollable").mousedragscrollable();</script>
+<script>
+    $(".mousedragscrollable").mousedragscrollable();
+</script>
 
 </html>
